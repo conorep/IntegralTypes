@@ -4,7 +4,10 @@ public class IntegerClasses
 {
     public static void main(String[] args)
     {
-        assignBinary();
+        //assignBinary();
+        //assignHex();
+
+        // check our answers
 
     }
 
@@ -36,6 +39,22 @@ public class IntegerClasses
 
     public static void assignHex()
     {
+        // integral types
+        // byte holds 8 bits
+        byte byteOne = 0x2A;
+        // 2 x 16^1 + 10 x 16 ^ 0 = 42
+        System.out.println("Decimal value: " + byteOne);
+
+        // short, int, long have a toBinaryString() static method in their classes
+        // declare a short and assign a hex value to it
+        short shortOne = 0x2FFF;
+        // 2 x 16^3 + 15 x 16^2 + 15 x 16^1 + 15 x 16^0 = 33616127
+        System.out.println("Decimal value: " + shortOne);
+
+        // int is 32 bits. every 4 bits represents one hex digit (0 - F)
+        int num2 = 0x206A_FFFF;
+        System.out.println("Decimal value: " + num2);
+        System.out.println("Binary value: " + Integer.toBinaryString(num2));
 
     }
 }
